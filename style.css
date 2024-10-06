@@ -1,0 +1,116 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+    color: #555;
+}
+
+/* Toolbar styling */
+#toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#toolbar input[type="file"],
+#toolbar button {
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toolbar input[type="file"] {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#toolbar button {
+    background-color: #007bff;
+    color: white;
+}
+
+#toolbar button:hover {
+    background-color: #0056b3;
+}
+
+/* PDF container styling */
+#pdf-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Canvas elements */
+#pdf-canvas,
+#annotation-canvas {
+	position: absolute;
+    border: 1px solid #aaa;
+    width: 100%;
+    height: auto;
+    cursor: crosshair;
+}
+
+/* Page controls styling */
+#page-controls {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#page-controls button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#page-controls button:hover {
+    background-color: #0056b3;
+}
+
+#page-controls span {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    #pdf-container {
+        width: 90%;
+    }
+
+    #toolbar input[type="file"],
+    #toolbar button,
+    #page-controls button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    #page-controls span {
+        font-size: 16px;
+    }
+}

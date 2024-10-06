@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Annotator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+	#pdf-container {
+    		position: relative;
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		border: 1px solid #ddd;
+    		margin: 0 auto;
+    		width: 100%;
+    		max-width: 800px;
+    		height: auto;
+    		background-color: white;
+    		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #pdf-canvas, #annotation-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #toolbar {
+            margin-bottom: 10px;
+        }
+        #page-controls {
+            margin-top: 10px;
+        }
+        #page-controls button {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PDF Annotator</h1>
+    <div id="toolbar">
+        <input type="file" id="file-input" accept="application/pdf">
+        <button id="save-pdf">Save Edited PDF</button>
+    </div>
+    <div id="pdf-container">
+        <canvas id="pdf-canvas"></canvas>
+        <canvas id="annotation-canvas"></canvas>
+    </div>
+    <div id="page-controls">
+        <button id="prev-page">Previous Page</button>
+        <button id="next-page">Next Page</button>
+        <span>Page: <span id="page-num"></span> / <span id="page-count"></span></span>
+    </div>
+
+    <!-- Include pdf.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <!-- Include pdf-lib library -->
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <!-- Include your JavaScript code -->
+    <script src="script.js"></script>
+</body>
+</html>
